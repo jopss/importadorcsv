@@ -9,6 +9,6 @@ Pre requisito rodar com Java 8.
 # executando no terminal
 na raiz do projeto:
 
-mvn clean install
-cd target
-java -jar importadorcsv-1.0.jar
++ mvn clean install
++ cd target
++ java -jar importadorcsv-1.0.jar
