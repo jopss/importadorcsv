@@ -22,14 +22,8 @@ public class ImportacaoCSVControlador {
         }
 
         public void iniciarImportacaoArquivo(String caminho) {
-                try {
-
-                        InputStream in = new FileInputStream(caminho);
-                        retorno = this.importacaoCSVManager.converter(in, RegiaoForm.class);
-
-                } catch (FileNotFoundException ex) {
-                        throw new ImportacaoException(ex);
-                }
+                InputStream in = Thread.currentThread().getClass().getResourceAsStream("/" + caminho);
+                retorno = this.importacaoCSVManager.converter(in, RegiaoForm.class);
         }
 
         public int totalizarColunaDistinct(String coluna) {
